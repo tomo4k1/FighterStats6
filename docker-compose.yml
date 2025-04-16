@@ -2,7 +2,7 @@ services:
   frontend:
     build: ./frontend
     ports:
-      - "5173:5173"  # コンテナ内の 5173 ポートをホストの同じポートにマッピング
+      - "3001:3000"  # コンテナ内の 3000 番ポートをホストの 3001 にマッピング
     depends_on:
       - backend
     volumes:
