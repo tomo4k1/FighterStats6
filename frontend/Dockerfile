@@ -1,5 +1,5 @@
 # frontend/Dockerfile
-FROM node:16
+FROM node:20
 
 # 作業ディレクトリの設定
 WORKDIR /app
