@@ -1,0 +1,2 @@
+# FighterStats6
+StreetFighter6の戦績管理アプリ
