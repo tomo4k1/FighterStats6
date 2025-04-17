@@ -1,0 +1,20 @@
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "3001:3000"  # コンテナ内の 3000 番ポートをホストの 3001 にマッピング
+    depends_on:
+      - backend
+    volumes:
+      - ./frontend:/app  # ローカルのソースコード変更を即時反映
+    environment:
+      - NODE_ENV=development
+
+  backend:
+    build: ./backend
+    ports:
+      - "3000:3000"  # Rails サーバーをホストの 3000 に公開
+    volumes:
+      - ./backend:/app  # ソースコード変更を即時反映
+    environment:
+      - RAILS_ENV=development
